@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+* { 
+    margin: 0px; 
+    padding: 0px; 
+}
+
+p {
+    color:#36a93b;
+}
+
+img { 
+    width: 100vw;
+    height: auto;
+}
+header {
+    height: 70px;
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	background:white;
+	align-items: center;
+	padding: 20px;
+}
+
+nav img{
+    width: 50vw;
+    text-align: center;
+}
+
+header.fixed{
+    position: fixed;
+      z-index: 999;
+      top:0;
+      left:0;
+  }
