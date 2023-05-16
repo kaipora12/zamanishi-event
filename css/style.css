@@ -2,7 +2,7 @@
 
 * { 
     margin: 0px; 
-    padding: 0px; 
+    padding: 0px;
 }
 
 p {
@@ -16,16 +16,29 @@ img {
 header {
     height: 70px;
 	width:100%;
-	display: flex;
 	justify-content: space-between;
-	background:white;
-	align-items: center;
+	background:#e6e6fa;
+	text-align: center;
 	padding: 20px;
+    box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.5);
 }
 
 nav img{
-    width: 50vw;
-    text-align: center;
+    width: 30vw;
+    padding-bottom: 20px;
+    /* text-align: center; */
+}
+
+@media screen and (max-width:62.5rem){
+    header {
+        height: 20px;
+        width: 100%;
+        justify-content: space-between;
+        text-align: center;
+    }
+    nav img {
+        width: 70vw;
+    }
 }
 
 header.fixed{
@@ -34,3 +47,49 @@ header.fixed{
       top:0;
       left:0;
   }
+
+footer {
+    height: 70px;
+	width:100%;
+	justify-content: space-between;
+	background:#e6e6fa;
+	text-align: center;
+	padding: 30px;
+    box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.5);
+}
+
+footer img {
+    width: 30vh;
+}
+
+
+  ul{
+    text-align: center;
+    
+  }
+  li {
+    width: 25%;
+    list-style: none;
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+
+  .topics img{
+	transform: scale(1.1);
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.topics a:hover img{/*hoverした時の変化*/
+	transform: scale(1);/*拡大の値を変更したい場合はこの数値を変更*/
+}
+
+
+/*　画像のマスク　*/
+
+.mask{
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+}
