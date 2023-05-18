@@ -5,42 +5,30 @@
     padding: 0px;
 }
 
-p {
-    color:#36a93b;
-}
-
-img { 
-    width: 100vw;
-    height: auto;
-}
 header {
-    height: 86px;
-	width:100%;
-	justify-content: space-between;
+    height: 30vh;
+	width: 100vw;
+	/* justify-content: space-between; */
 	background-image: url(/images/zamanishi-header.png);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: relative;
     background-size: contain;
+    object-fit: cover;
 	text-align: center;
 	padding: 20px;
     box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.5);
 }
 
-nav img{
-    width: 30vw;
-    padding-bottom: 20px;
-    /* text-align: center; */
-}
-
 @media screen and (max-width:62.5rem){
     header {
-        height: 20px;
-        width: 100%;
+        height: 10vh;
+        width: 390px;
         justify-content: space-between;
+        background-position: relative;
         text-align: center;
     }
     nav img {
-        width: 70vw;
+        width: 90vw;
     }
 }
 
@@ -52,50 +40,76 @@ header.fixed{
   }
 
 footer {
-    height: 70px;
+    height: 10vh;
 	width:100%;
 	justify-content: space-between;
 	background:#e6e6fa;
 	text-align: center;
 	padding: 30px;
-    box-shadow: 0px 8px 5px -5px rgba(0,0,0,0.5);
 }
 
 footer img {
     width: 30vh;
+    justify-content: center;
 }
 
-
-  ul{
-    /* text-align: center; */
-    
-  }
-  li {
+.topics{
     text-align: center;
-    width: 25%;
-    list-style: none;
-    display: block;
+    justify-content: center;
+    display: flex;
+}
+
+.topics img {
+    width: 40%;
+    margin-top: 40px;
   }
-  img {
-    width: 100%;
+
+  @media screen and (max-width:62.5rem) {
+    .topics img {
+        width: 40vh;
+        padding-top: 10px;
+    }
+
+    .topics li {
+        list-style: none;
+    }
+    p {
+        font-size: 5px;
+        /* padding-top:-70px ; */
+        /* background-color:#e6e6fa; */
+        /* padding-top: -80px; */
+    }
+
+    footer {
+        /* background-color:#e6e6fa; */
+        margin-top: 20px;
+    }
+
+    footer img {
+        width: 60vw;
+        margin-top: -40px;
+    }
   }
 
-  .topics img{
-    width: 60vw;
-    /* text-align: center; */
-	transform: scale(1.1);
-	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+  .box{
+	opacity: 0;
 }
 
-.topics a:hover img{/*hoverした時の変化*/
-	transform: scale(1);/*拡大の値を変更したい場合はこの数値を変更*/
-}
-
-
-/*　画像のマスク　*/
-
-.mask{
-    display: block;
-    line-height: 0;/*行の高さを0にする*/
-    overflow: hidden;/*拡大してはみ出る要素を隠す*/
-}
+.fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:1.0s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
